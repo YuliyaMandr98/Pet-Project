@@ -5,7 +5,7 @@ export default defineConfig({
     expect: {
         timeout: 5000,
     },
-    reporter: [['list'], ['html', { open: 'never' }]],
+    reporter: [['list'], ['html', { open: 'never' }], ['allure-playwright']],
     use: {
         headless: true,
         viewport: { width: 1280, height: 720 },

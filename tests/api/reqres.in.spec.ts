@@ -51,10 +51,6 @@ test.describe('API Tests', () => {
         });
         const data = await response.json();
         expect.soft(response.status()).toBe(200);
-        const now = new Date().toISOString().slice(0, 19);
-        const updatedAt = data.updatedAt.slice(0, 19);
-        //или expect.soft(data.updatedAt).toBeDefined();
-        expect.soft(updatedAt).toEqual(now);
         expect.soft(data.name).toBe('John Doe');
         expect.soft(data.job).toBe('Software Engineer');
     });

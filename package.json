@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testAllure": "npx playwright test --reporter=allure-playwright && npx allure generate --clean allure-results -o allure-report && npx allure open allure-report"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,17 @@
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1",
+    "@types/pg": "^8.15.5",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.3",
+    "concurrently": "^9.2.0",
+    "json-server": "^1.0.0-beta.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "wait-on": "^8.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "pg": "^8.16.3"
   }
 }
