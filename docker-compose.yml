@@ -1,0 +1,7 @@
+services:
+  playwright-tests:
+    build: .
+    container_name: playwright_api_tests
+    volumes:
+      - .:/app
+    command: npx playwright test --reporter=allure-playwright
